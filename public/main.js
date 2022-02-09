@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   cardArray.sort(() => 0.5 - Math.random());
-
+  const resetBtn = document.querySelector("button");
   const grid = document.querySelector(".grid");
   const resultDisplay = document.querySelector("#result");
   let cardsChosen = [];
@@ -112,4 +112,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   createBoard();
+
+  reset = () => {
+    grid.innerHTML = "";
+    resultDisplay.innerHTML = "";
+    createBoard();
+  };
+
+  resetBtn.addEventListener("click", reset);
 });
