@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
   reset = () => {
     grid.innerHTML = "";
     resultDisplay.innerHTML = "";
+    cardArray.sort(() => 0.5 - Math.random());
     createBoard();
   };
 
