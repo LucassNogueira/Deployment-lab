@@ -1,25 +1,6 @@
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-}
-header {
-  background-color: white;
-  width: 100vw;
-  height: 150px;
-}
-.nav {
-  float: right;
-  padding-right: 80px;
-}
-.nav li {
-  display: inline-block;
-}
-body {
-  background-color: rgb(59, 39, 39);
-}
-
-h1 {
-  color: rgb(0, 0, 0);
-  padding-top: 20px;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 400px;
 }
