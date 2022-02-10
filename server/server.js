@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const rollbar = require("rollbar");
+const Rollbar = require("rollbar");
 
 const app = express();
 
@@ -18,6 +18,14 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
+});
+
+app.get("/", (req, res) => {
+  try {
+    nonExistentFunction();
+  } catch (error) {
+    rollbar.error(error);
+  }
 });
 
 const port = process.env.PORT || 4000;
